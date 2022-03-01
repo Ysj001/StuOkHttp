@@ -27,7 +27,7 @@ fun URL.isSameConnection(other: URL): Boolean =
         && protocol == other.protocol
 
 fun createThreadFactory(name: String, daemon: Boolean = false) = ThreadFactory {
-    Thread(it).apply { isDaemon = daemon }
+    Thread(it, name).apply { isDaemon = daemon }
 }
 
 /** Closes this, ignoring any checked exceptions. */
